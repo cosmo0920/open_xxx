@@ -5,7 +5,7 @@ Module.new do
   Plugin.create(:open_favotter).add_event_filter(:command){ |menu|
     menu[:open_favotter] = {
       :slug => :open_favotter,
-      :name => 'この人のfavotterを見る',
+      :name => 'この人のfavotterを開く',
       :condition => lambda{ |m| m.message.repliable? },
       :exec => lambda{ |m| Gtk::openurl("http://favotter.net/user/#{m.message.user.idname}&mode=new") },
       :visible => true,
