@@ -5,7 +5,7 @@ Module.new do
   Plugin.create(:open_twitter).add_event_filter(:command){ |menu|
     menu[:open_twitter] = {
       :slug => :open_twitter,
-      :name => 'この人のtwitterを見る',
+      :name => lambda{ |m| "#{m.message.user.idname}さんのtwitter Webへ"},
       :condition => lambda{ |m| m.message.repliable? },
       :exec => lambda{ |m| Gtk::openurl("http://twitter.com/#!/#{m.message.user.idname}") },
       :visible => true,
