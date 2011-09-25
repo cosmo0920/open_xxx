@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# favstarを開く
+# favotterを開く
 
 Module.new do
   Plugin.create(:open_favotter).add_event_filter(:command){ |menu|
