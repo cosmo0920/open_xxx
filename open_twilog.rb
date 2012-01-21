@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# twitter Webを開く
+# twilogを開く
 
 Module.new do
   Plugin.create(:open_twilog).add_event_filter(:command){ |menu|
