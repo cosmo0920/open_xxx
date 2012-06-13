@@ -10,7 +10,7 @@ Module.new do
         bing_search_word = opt.message.entity.to_s[opt.miraclepainter.textselector_range]
         Gtk::openurl("http://www.bing.com/search?q=" + URI.escape(bing_search_word).to_s) },
       :visible => true,
-      :role => :message }
+      :role => :message_select }
     [menu]
 	  }
 end
