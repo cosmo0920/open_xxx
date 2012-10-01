@@ -1,15 +1,12 @@
 # -*- coding: utf-8 -*-
 # favotterを開く
 
-Module.new do
-  Plugin.create(:open_favotter).add_event_filter(:command){ |menu|
-    menu[:open_favotter] = {
-      :slug => :open_favotter,
-      :name => 'この人のfavotterを開く',
-      :condition => lambda{ |m| m.message.repliable? },
-      :exec => lambda{ |m| Gtk::openurl("http://favotter.net/user/#{m.message.user.idname}&mode=new") },
-      :visible => true,
-      :role => :message }
-    [menu]
-  }
+Plugin.create :open_favstar do
+    command(:open_favotter,
+      name: 'この人のfavotterを見る',
+      condition: Plugin::Command[:CanReplyAll],
+      visible: true,
+      role: :timeline) do |opt|
+        Gtk::openurl("http://favotter.net/user/#{opt.messages.first.message.idname}&mode=new")
+  end
 end
