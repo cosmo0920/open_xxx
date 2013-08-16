@@ -1,0 +1,10 @@
+---
+slug: :open_twilog
+depends:
+  mikutter: 0.2.1.1132
+  plugin:
+  - gtk
+version: '1.0'
+author: cosmo__
+name: open twilog
+description: Twilogを開くコマンドを追加します。
