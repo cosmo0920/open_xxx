@@ -1,0 +1,11 @@
+---
+slug: :bing_search
+depends:
+  mikutter: 0.2.1.1132
+  plugin:
+  - command
+  - gtk
+version: '1.0'
+author: cosmo__
+name: bing search
+description: Bingで検索するコマンドを追加します。

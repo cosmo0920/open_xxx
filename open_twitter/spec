@@ -1,0 +1,11 @@
+---
+slug: :open_twitter
+depends:
+  mikutter: 0.2.1.1132
+  plugin:
+  - command
+  - gtk
+version: '1.0'
+author: cosmo__
+name: open twitter
+description: Twitter.comを開くコマンドを追加します。
